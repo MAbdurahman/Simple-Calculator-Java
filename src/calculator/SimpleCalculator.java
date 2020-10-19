@@ -562,7 +562,6 @@ public class SimpleCalculator extends javax.swing.JFrame {
     }// </editor-fold>                        
     /**
      * clearAll Method - Clears all and resets the calculator to the original initialization
-     * @param Void
      */
     private void clearAll() {
         textDisplay.setText("0");
@@ -574,7 +573,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
     }//end of the clearAll Method
     /**
      * addNextDigitToDisplay Method - Adds the next digit to the display
-     * @param Int - the next digit
+     * @param nextDigit - integer representing the next digit
      */
     protected void addNextDigitToDisplay(int nextDigit) {
         if (isClearForNextDigit) {
@@ -599,7 +598,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
     /**
      * processOperator Method - Processes the operator by calling processLastOperator
      * method
-     * @param String - the operator
+     * @param operator - String representing the operator
      * @throws DivideByZeroException
      * @throws NonRealNumberException
      * @throws InvalidEntryException
@@ -649,7 +648,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
     }//end of the processOperator Method
     /**
      * displayError Method - Displays the appropriate error message
-     * @param String - the error message
+     * @param message - String representing the error message
      */
     protected void displayError(String message) {
         textDisplay.setText(message);
@@ -660,7 +659,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
     }//end of the displayError Method
     /**
      * displayResult Method - Displays the result in the number format
-     * @param Double - the result
+     * @param result - double representing the result
      */
     protected void displayResult(double result) {
         String answer = numberFormatter.format(result);
@@ -673,7 +672,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
     /**
      * processLastOperator Method - Performs the operations of addition, subtraction, multiplication,
      * division, and exponents.
-     * @param Void
+     * @return result - a double representing the result
      * @throws DivideByZeroException
      * @throws InvalidEntryException
      * @throws NonRealNumberException
@@ -733,9 +732,9 @@ public class SimpleCalculator extends javax.swing.JFrame {
     }//end of the processLastOperator Method
     /**
      * processExponent Method - Performs the exponent operations
-     * @param Double - the base number
-     * @param Double - the exponent number
-     * @return Double - Returns the first number raised to the second number as a 
+     * @param base - a double representing the base number
+     * @param exponent - a double representing the exponent number
+     * @return double - Returns the first number raised to the second number as a
      * double
      */
     protected Double processExponent(double base, double exponent) {
@@ -744,7 +743,6 @@ public class SimpleCalculator extends javax.swing.JFrame {
     }//end of the processExponent Method
     /**
      * processEqualOperation Method - Process the equal operation
-     * @param Void
      */
     @SuppressWarnings("UseSpecificCatch")
     protected void processEqualOperation() {
@@ -786,7 +784,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         /**
          * actionPerformed Method - Overrides the actionPerformed method of the ActionListener
          * Interface, and redefines it to respond to the number buttons.
-         * @param ActionEvent - the event of clicking a number button
+         * @param ae - the ActionEvent of clicking a number button
          */
         @Override
         public void actionPerformed(ActionEvent ae) {
@@ -840,7 +838,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
          * actionPerformed Method - Overrides the actionPerformed Method of the ActionListener
          * Interface, and redefines it to responds to the events of the following operant buttons:
          * addButton, subtractButton, multiplyButton, divideButton, and exponentButton,
-         * @param ActionEvent - the event of clicking one of the above mentioned operant buttons
+         * @param ae - the ActionEvent of clicking one of the above mentioned operand buttons
          */
         @Override
         public void actionPerformed(ActionEvent ae) {
@@ -914,7 +912,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         /**
          * DivideByZeroException Constructor - Creates an instance of the DivideByZeroException with
          * one parameter.
-         * @param String - the message
+         * @param message - a String representing the message
          */
         public DivideByZeroException(String message) {
             super(message);
@@ -937,7 +935,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         /**
          * NonRealNumberException Constructor - Creates an instance of NonRealNumberException with one
          * parameter.
-         * @param String - the message
+         * @param message - a String representing the message
          */
         public NonRealNumberException(String message) {
             super(message);
@@ -959,7 +957,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         /**
          * InvalidEntryException Constructor - Creates an instance of the InvalidEntryException with
          * one parameter
-         * @param String - the message
+         * @param message - a String representing the message
          */
         public InvalidEntryException(String message) {
             super(message);
@@ -968,7 +966,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
     }//end of the InValidEntryException Class
     /**
      * main Method - Contains the command line arguments
-     * @param String[] - the command line arguments
+     * @param args - a String[] representing the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
