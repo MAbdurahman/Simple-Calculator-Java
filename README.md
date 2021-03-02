@@ -5,3 +5,4 @@ percentages.  Also, error checking is accomplished for all mathematical computat
 allowed for one entry is thirteen, and decimals are rounded off the to nearest fifth place.
 
 #### `This application utilizes java jdk 1.8.0_251`
+![simple-calculator](https://user-images.githubusercontent.com/20928980/96503099-5fc20d00-1218-11eb-96fd-b09d9085bac4.gif)
